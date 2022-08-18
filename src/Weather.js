@@ -1,39 +1,43 @@
 import React from "react";
 import Forecast from "./Forecast";
 
+import img from "./Natali.jpg";
+
 import "./Weather.css";
 
 export default function Weather() {
   return (
     <div className="Weather">
-      <div className="row">
-        <div className="col-4">
+      <div className="row mb-3">
+        <div className="col-5  weather-info">
           <form>
-            <div className="row">
-              <div className="col-9">
-                <input type="serch" placeholder="Type a city.." />
-              </div>
+            <input
+              type="search"
+              placeholder="Type a city.."
+              className="search rounded-2"
+            />
 
-              <div className="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  className="btn btn-primary"
-                />
-              </div>
-            </div>
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-dark button"
+            />
           </form>
-
+          <h3 className="text-center mt-3">London</h3>
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxn1TVuc43AnX0wZq_tHjzqS458oMTG7FnYg&usqp=CAU"
             alt="Cloudy"
+            width={150}
+            className="weather-img"
           />
-
-          <div>
-            <span>22</span>°C
+          <div className="text-center">
+            <span className="temperature">22</span>
+            <span className="unit">°C</span>
           </div>
 
-          <div>
+          <hr />
+
+          <div className="text-center">
             <ul>
               <li>
                 <strong>Monday,</strong> 16:00
@@ -44,19 +48,22 @@ export default function Weather() {
           </div>
         </div>
 
-        <div className="col-8">
-          <div className="row">
-            <div className="col-6">
-              <h2>This Week</h2>
-            </div>
+        <div className="col-7 weather-main">
+          <div className="d-flex justify-content-between">
+            <h2>This Week</h2>
 
-            <div className="col-6">
-              <button className="btn btn-dark">°C</button>
+            <div>
+              <button className="btn btn-dark me-2 rounded-pill">°C</button>
 
-              <button className="btn btn-light">°F</button>
+              <button className="btn btn-light me-4 rounded-pill">°F</button>
 
-              <a>
-                <img src="/" alt="Nataliia" />
+              <a href="/" title="Nataliia">
+                <img
+                  src={img}
+                  alt="Nataliia"
+                  width={40}
+                  className="rounded-2"
+                />
               </a>
             </div>
           </div>
@@ -73,7 +80,7 @@ export default function Weather() {
 
             <div className="col-4">
               <h4>Wind</h4>
-              <p>5 m/StrictMode</p>
+              <p>5 m/s</p>
             </div>
 
             <div className="col-4">

@@ -1,0 +1,7 @@
+.App {
+  margin: 100px auto 10px;
+  max-width: 900px;
+}
+.App p {
+  text-align: center;
+}

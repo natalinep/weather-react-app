@@ -6,6 +6,15 @@ export default function App() {
     <div className="App">
       <div class="container">
         <Weather />
+        <p>
+          This app was coded by Nataliia Neporiadkina and{" "}
+          <a
+            href="https://github.com/natalinep/weather-react-app"
+            title="GitHub"
+          >
+            open-sourced in GitHub
+          </a>
+        </p>
       </div>
     </div>
   );
