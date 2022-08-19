@@ -94,17 +94,17 @@ export default function Weather() {
           <div className="highlights">
             <div className="highlights-inner">
               <h4>Huimdity</h4>
-              <div>12%</div>
+              <b>12%</b>
             </div>
 
             <div className="highlights-inner">
               <h4>Wind</h4>
-              <div>5 m/s</div>
+              <b>5 m/s</b>
             </div>
 
             <div className="highlights-inner">
               <h4>Feels like</h4>
-              <div>12°C</div>
+              <b>12°C</b>
             </div>
           </div>
         </div>

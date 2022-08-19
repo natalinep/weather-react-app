@@ -33,7 +33,7 @@ export default function Forecast() {
             />
           </div>
           <div className="temp">
-            22°C/<span>20°C</span>
+            22°C / <span>20°C</span>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ export default function Forecast() {
             />
           </div>
           <div className="temp">
-            22°C/<span>20°C</span>
+            22°C / <span>20°C</span>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ export default function Forecast() {
             />
           </div>
           <div className="temp">
-            22°C/<span>20°C</span>
+            22°C / <span>20°C</span>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ export default function Forecast() {
             />
           </div>
           <div className="temp">
-            22°C/<span>20°C</span>
+            22°C / <span>20°C</span>
           </div>
         </div>
 
@@ -95,7 +95,7 @@ export default function Forecast() {
             />
           </div>
           <div className="temp">
-            22°C/<span>20°C</span>
+            22°C / <span>20°C</span>
           </div>
         </div>
       </div>
