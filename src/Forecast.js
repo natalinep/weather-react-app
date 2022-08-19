@@ -17,7 +17,9 @@ export default function Forecast() {
               animate={true}
             />
           </div>
-          <div className="temp">22°C</div>
+          <div className="temp">
+            22°C / <span>20°C</span>
+          </div>
         </div>
 
         <div className="day-inner">
@@ -30,7 +32,9 @@ export default function Forecast() {
               animate={true}
             />
           </div>
-          <div className="temp">22°C</div>
+          <div className="temp">
+            22°C/<span>20°C</span>
+          </div>
         </div>
 
         <div className="day-inner">
@@ -43,7 +47,9 @@ export default function Forecast() {
               animate={true}
             />
           </div>
-          <div className="temp">22°C</div>
+          <div className="temp">
+            22°C/<span>20°C</span>
+          </div>
         </div>
       </div>
 
@@ -58,7 +64,9 @@ export default function Forecast() {
               animate={true}
             />
           </div>
-          <div className="temp">22°C</div>
+          <div className="temp">
+            22°C/<span>20°C</span>
+          </div>
         </div>
 
         <div className="day-inner">
@@ -71,7 +79,9 @@ export default function Forecast() {
               animate={true}
             />
           </div>
-          <div className="temp">22°C</div>
+          <div className="temp">
+            22°C/<span>20°C</span>
+          </div>
         </div>
 
         <div className="day-inner">
@@ -84,7 +94,9 @@ export default function Forecast() {
               animate={true}
             />
           </div>
-          <div className="temp">22°C</div>
+          <div className="temp">
+            22°C/<span>20°C</span>
+          </div>
         </div>
       </div>
     </div>

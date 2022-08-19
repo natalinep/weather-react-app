@@ -14,3 +14,21 @@
   min-width: 120px;
   text-align: center;
 }
+
+.Forecast .day-inner h6 {
+  transition: all 0.2s ease-in-out;
+}
+
+.Forecast .day-inner:hover h6 {
+  font-weight: bold;
+}
+
+.Forecast .day-inner span {
+  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+}
+
+.Forecast .day-inner span:hover {
+  opacity: 1;
+  font-weight: bold;
+}

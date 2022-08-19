@@ -8,8 +8,9 @@
 }
 
 .App a {
-  color: black;
+  color: #212529;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .App a:hover {

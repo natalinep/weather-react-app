@@ -78,4 +78,10 @@
 
 .Weather .highlights-inner h4 {
   margin-bottom: 20px;
+  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+}
+
+.Weather .highlights-inner:hover h4 {
+  opacity: 1;
 }

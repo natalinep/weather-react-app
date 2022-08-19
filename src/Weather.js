@@ -25,7 +25,9 @@ export default function Weather() {
               className="btn btn-dark button"
             />
           </form>
-          <h3 className="text-center mt-3">London</h3>
+          <h3 className="text-center mt-3">
+            <b>London</b>
+          </h3>
           <div className="weather-img">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
@@ -59,11 +61,20 @@ export default function Weather() {
             </h2>
 
             <div>
-              <button className="btn btn-dark me-2 rounded-pill">°C</button>
+              <button className="btn btn-dark me-2 rounded-pill btn-active btn-unit">
+                °C
+              </button>
 
-              <button className="btn btn-light me-4 rounded-pill">°F</button>
+              <button className="btn btn-light me-4 rounded-pill btn-unit">
+                °F
+              </button>
 
-              <a href="/" title="Nataliia">
+              <a
+                href="https://bright-kulfi-de3a60.netlify.app/"
+                title="Nataliia Portfolio"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <img
                   src={img}
                   alt="Nataliia"
