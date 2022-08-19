@@ -25,7 +25,7 @@ export default function Weather() {
               className="btn btn-dark button"
             />
           </form>
-          <h3 className="text-center mt-3">
+          <h3 className="text-center mt-4">
             <b>London</b>
           </h3>
           <div className="weather-img">

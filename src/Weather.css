@@ -9,23 +9,19 @@
   border: 1px #f5f5f5 solid;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  padding: 25px;
+  padding: 15px;
+}
+
+.Weather form {
+  display: flex;
+  justify-content: space-between;
 }
 
 .Weather .search {
-  min-width: 230px;
-  margin-top: 3px;
-  margin-left: 1px;
+  min-width: 265px;
   background: #ececee;
   border: 1px solid #ececee;
-  padding: 2px 0 2px 5px;
-}
-
-.Weather .button {
-  height: 30px;
-  padding: 0 15px;
-  margin-left: 20px;
-  margin-bottom: 5px;
+  padding-left: 10px;
 }
 
 .Weather .weather-img {
@@ -49,7 +45,7 @@
 
 .Weather ul {
   list-style: none;
-  margin: 20px 0 0 0;
+  margin: 25px 0 0 0;
   padding: 0;
 }
 
@@ -70,7 +66,7 @@
   background-color: #f5f5f5;
   border: 1px #f5f5f5 solid;
   border-radius: 10px;
-  margin: 5px;
+  margin: 5px 0;
   padding: 15px 20px;
   min-width: 120px;
   text-align: center;
@@ -85,4 +81,10 @@
 
 .Weather .highlights-inner:hover h4 {
   opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .Weather .search {
+    min-width: 190px;
+  }
 }
