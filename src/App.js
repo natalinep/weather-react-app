@@ -10,6 +10,8 @@ export default function App() {
           This app was coded by Nataliia Neporiadkina and{" "}
           <a
             href="https://github.com/natalinep/weather-react-app"
+            target="_blank"
+            rel="noreferrer noopener"
             title="GitHub"
           >
             open-sourced in GitHub

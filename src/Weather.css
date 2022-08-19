@@ -1,5 +1,7 @@
 .Weather {
   margin: 0 auto;
+  box-shadow: 5px 10px 30px 2px rgba(0, 0, 0, 0.2);
+  font-family: "Oswald", sans-serif;
 }
 
 .Weather .weather-info {
@@ -14,18 +16,22 @@
   min-width: 230px;
   margin-top: 3px;
   margin-left: 1px;
+  background: #ececee;
+  border: 1px solid #ececee;
+  padding: 2px 0 2px 5px;
 }
 
 .Weather .button {
   height: 30px;
-  padding: 2px 10px;
+  padding: 0 15px;
   margin-left: 20px;
   margin-bottom: 5px;
 }
 
 .Weather .weather-img {
-  display: block;
-  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
 }
 
 .Weather .temperature {
@@ -36,14 +42,14 @@
 
 .Weather .unit {
   position: relative;
-  top: -15px;
+  top: -18px;
   font-size: 40px;
   margin-left: 5px;
 }
 
 .Weather ul {
   list-style: none;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 0 0;
   padding: 0;
 }
 
@@ -53,4 +59,23 @@
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   padding: 15px;
+}
+
+.Weather .highlights {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Weather .highlights-inner {
+  background-color: #f5f5f5;
+  border: 1px #f5f5f5 solid;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 15px 20px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.Weather .highlights-inner h4 {
+  margin-bottom: 20px;
 }

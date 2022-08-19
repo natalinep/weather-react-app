@@ -1,24 +1,91 @@
 import React from "react";
+import ReactAnimatedWeather from "react-animated-weather";
 
 import "./Forecast.css";
 
 export default function Forecast() {
   return (
-    <div className="Forecast">
-      <div className="row">
-        <div className="col-4">Sun</div>
+    <div className="Forecast my-4">
+      <div className="day">
+        <div className="day-inner">
+          <h6>Sun</h6>
+          <div className="img">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="goldenrod"
+              size={40}
+              animate={true}
+            />
+          </div>
+          <div className="temp">22°C</div>
+        </div>
 
-        <div className="col-4">Mon</div>
+        <div className="day-inner">
+          <h6>Mon</h6>
+          <div className="img">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="goldenrod"
+              size={40}
+              animate={true}
+            />
+          </div>
+          <div className="temp">22°C</div>
+        </div>
 
-        <div className="col-4">Tue</div>
+        <div className="day-inner">
+          <h6>Tue</h6>
+          <div className="img">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="goldenrod"
+              size={40}
+              animate={true}
+            />
+          </div>
+          <div className="temp">22°C</div>
+        </div>
       </div>
 
-      <div className="row">
-        <div className="col-4">Wed</div>
+      <div className="day">
+        <div className="day-inner">
+          <h6>Wed</h6>
+          <div className="img">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="goldenrod"
+              size={40}
+              animate={true}
+            />
+          </div>
+          <div className="temp">22°C</div>
+        </div>
 
-        <div className="col-4">Thu</div>
+        <div className="day-inner">
+          <h6>Thu</h6>
+          <div className="img">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="goldenrod"
+              size={40}
+              animate={true}
+            />
+          </div>
+          <div className="temp">22°C</div>
+        </div>
 
-        <div className="col-4">Fri</div>
+        <div className="day-inner">
+          <h6>Fri</h6>
+          <div className="img">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="goldenrod"
+              size={40}
+              animate={true}
+            />
+          </div>
+          <div className="temp">22°C</div>
+        </div>
       </div>
     </div>
   );

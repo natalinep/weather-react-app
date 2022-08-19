@@ -1,5 +1,6 @@
 import React from "react";
 import Forecast from "./Forecast";
+import ReactAnimatedWeather from "react-animated-weather";
 
 import img from "./Natali.jpg";
 
@@ -15,6 +16,7 @@ export default function Weather() {
               type="search"
               placeholder="Type a city.."
               className="search rounded-2"
+              autoFocus="on"
             />
 
             <input
@@ -24,12 +26,14 @@ export default function Weather() {
             />
           </form>
           <h3 className="text-center mt-3">London</h3>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxn1TVuc43AnX0wZq_tHjzqS458oMTG7FnYg&usqp=CAU"
-            alt="Cloudy"
-            width={150}
-            className="weather-img"
-          />
+          <div className="weather-img">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="goldenrod"
+              size={150}
+              animate={true}
+            />
+          </div>
           <div className="text-center">
             <span className="temperature">22</span>
             <span className="unit">°C</span>
@@ -50,7 +54,9 @@ export default function Weather() {
 
         <div className="col-7 weather-main">
           <div className="d-flex justify-content-between">
-            <h2>This Week</h2>
+            <h2>
+              <b>This Week</b>
+            </h2>
 
             <div>
               <button className="btn btn-dark me-2 rounded-pill">°C</button>
@@ -70,22 +76,24 @@ export default function Weather() {
 
           <Forecast />
 
-          <h2>Today's Highlights</h2>
+          <h2>
+            <b>Today's Highlights</b>
+          </h2>
 
-          <div className="row">
-            <div className="col-4">
+          <div className="highlights">
+            <div className="highlights-inner">
               <h4>Huimdity</h4>
-              <p>12%</p>
+              <div>12%</div>
             </div>
 
-            <div className="col-4">
+            <div className="highlights-inner">
               <h4>Wind</h4>
-              <p>5 m/s</p>
+              <div>5 m/s</div>
             </div>
 
-            <div className="col-4">
+            <div className="highlights-inner">
               <h4>Feels like</h4>
-              <p>12 °C</p>
+              <div>12°C</div>
             </div>
           </div>
         </div>

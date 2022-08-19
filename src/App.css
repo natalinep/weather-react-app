@@ -4,4 +4,19 @@
 }
 .App p {
   text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.App a {
+  color: black;
+  text-decoration: none;
+}
+
+.App a:hover {
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}
+
+body {
+  background-color: #cecfd2;
 }
