@@ -22,6 +22,7 @@ export default function Weather(props) {
   function showResponse(response) {
     setLoaded(true);
     setWeatherData({
+      coordinates: response.data.coord,
       city: response.data.name,
       temperature: response.data.main.temp,
       day: new Date(response.data.dt * 1000),
@@ -94,7 +95,7 @@ export default function Weather(props) {
               <b>{weatherData.city}</b>
             </h3>
             <div className="weather-img">
-              <WeatherIcon icon={weatherData.icon} />
+              <WeatherIcon icon={weatherData.icon} size={150} />
             </div>
             <div className="text-center">
               <span className="temperature">{Math.round(degree)}</span>
@@ -162,7 +163,7 @@ export default function Weather(props) {
               </div>
             </div>
 
-            <Forecast />
+            <Forecast coordinates={weatherData.coordinates} />
 
             <h2>
               <b>Today's Highlights</b>
