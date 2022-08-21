@@ -85,6 +85,11 @@
   opacity: 1;
 }
 
+.Weather .loading {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 992px) {
   .Weather .search {
     min-width: 190px;

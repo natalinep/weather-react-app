@@ -5,6 +5,8 @@ import ShowTime from "./ShowTime";
 import ReactAnimatedWeather from "react-animated-weather";
 import axios from "axios";
 
+import ReactLoading from "react-loading";
+
 import img from "./Natali.jpg";
 
 import "./Weather.css";
@@ -158,6 +160,15 @@ export default function Weather(props) {
   } else {
     search();
 
-    return "Loading...";
+    return (
+      <div className="loading">
+        <ReactLoading
+          type="spinningBubbles"
+          color="ececee"
+          height={"20%"}
+          width={"20%"}
+        />
+      </div>
+    );
   }
 }
