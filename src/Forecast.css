@@ -1,8 +1,6 @@
 .Forecast .day {
-  margin: 10px 0 15px;
-
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .Forecast .day-inner {

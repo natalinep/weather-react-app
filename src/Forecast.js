@@ -6,7 +6,7 @@ import "./Forecast.css";
 export default function Forecast() {
   return (
     <div className="Forecast my-4">
-      <div className="day">
+      <div className="day mb-3">
         <div className="day-inner">
           <h6>Sun</h6>
           <div className="img">

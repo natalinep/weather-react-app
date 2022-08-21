@@ -5,7 +5,6 @@ import ShowTime from "./ShowTime";
 import axios from "axios";
 import WeatherIcon from "./WeatherIcon";
 import ReactLoading from "react-loading";
-
 import img from "./Natali.jpg";
 
 import "./Weather.css";
@@ -14,10 +13,14 @@ export default function Weather(props) {
   const [cityName, setCityName] = useState(props.defaultCity);
   let [loaded, setLoaded] = useState(false);
   let [weatherData, setWeatherData] = useState({});
+  let [unit, setUnit] = useState("°C");
+  let [degree, setDegree] = useState(weatherData.temperature);
+  let [feels, setFeels] = useState(weatherData.feelsLike);
+  let [activeCelsius, setActiveCelsius] = useState(true);
+  let [activeFah, setActiveFah] = useState(true);
 
   function showResponse(response) {
     setLoaded(true);
-    console.log(response.data);
     setWeatherData({
       city: response.data.name,
       temperature: response.data.main.temp,
@@ -29,6 +32,8 @@ export default function Weather(props) {
       feelsLike: response.data.main.feels_like,
       icon: response.data.weather[0].icon,
     });
+    setDegree(response.data.main.temp);
+    setFeels(response.data.main.feels_like);
   }
 
   function handleSubmit(event) {
@@ -44,6 +49,25 @@ export default function Weather(props) {
 
   function handleCityChange(event) {
     setCityName(event.target.value);
+  }
+
+  function showFahrenhait(event) {
+    event.preventDefault();
+    setUnit("°F");
+    setDegree((weatherData.temperature * 9) / 5 + 32);
+    setFeels((weatherData.feelsLike * 9) / 5 + 32);
+
+    setActiveFah(false);
+    setActiveCelsius(false);
+  }
+  function showCelsius(event) {
+    event.preventDefault();
+    setUnit("°C");
+    setDegree(weatherData.temperature);
+    setFeels(weatherData.feelsLike);
+
+    setActiveCelsius(true);
+    setActiveFah(true);
   }
 
   if (loaded) {
@@ -73,10 +97,8 @@ export default function Weather(props) {
               <WeatherIcon icon={weatherData.icon} />
             </div>
             <div className="text-center">
-              <span className="temperature">
-                {Math.round(weatherData.temperature)}
-              </span>
-              <span className="unit">°C</span>
+              <span className="temperature">{Math.round(degree)}</span>
+              <span className="unit">{unit}</span>
             </div>
 
             <hr />
@@ -102,11 +124,25 @@ export default function Weather(props) {
               </h2>
 
               <div>
-                <button className="btn btn-dark me-2 rounded-pill btn-active btn-unit">
+                <button
+                  onClick={showCelsius}
+                  className={
+                    activeCelsius
+                      ? "btn-dark btn me-2 rounded-pill"
+                      : "btn-light btn me-2 rounded-pill"
+                  }
+                >
                   °C
                 </button>
 
-                <button className="btn btn-light me-4 rounded-pill btn-unit">
+                <button
+                  onClick={showFahrenhait}
+                  className={
+                    activeFah
+                      ? "btn-light btn me-4 rounded-pill"
+                      : "btn-dark btn me-4 rounded-pill"
+                  }
+                >
                   °F
                 </button>
 
@@ -145,7 +181,10 @@ export default function Weather(props) {
 
               <div className="highlights-inner">
                 <h4>Feels like</h4>
-                <b>{Math.round(weatherData.feelsLike)}°C</b>
+                <b>
+                  {Math.round(feels)}
+                  {unit}
+                </b>
               </div>
             </div>
           </div>
@@ -156,14 +195,12 @@ export default function Weather(props) {
     search();
 
     return (
-      <div className="loading">
-        <ReactLoading
-          type="spinningBubbles"
-          color="ececee"
-          height={"20%"}
-          width={"20%"}
-        />
-      </div>
+      <ReactLoading
+        type="spinningBubbles"
+        color="ececee"
+        height={"20%"}
+        width={"20%"}
+      />
     );
   }
 }
