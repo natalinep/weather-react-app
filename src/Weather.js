@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Forecast from "./Forecast";
 import ShowDay from "./ShowDay";
 import ShowTime from "./ShowTime";
-import ReactAnimatedWeather from "react-animated-weather";
 import axios from "axios";
-
+import WeatherIcon from "./WeatherIcon";
 import ReactLoading from "react-loading";
 
 import img from "./Natali.jpg";
@@ -28,6 +27,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       feelsLike: response.data.main.feels_like,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -70,12 +70,7 @@ export default function Weather(props) {
               <b>{weatherData.city}</b>
             </h3>
             <div className="weather-img">
-              <ReactAnimatedWeather
-                icon="CLEAR_DAY"
-                color="goldenrod"
-                size={150}
-                animate={true}
-              />
+              <WeatherIcon icon={weatherData.icon} />
             </div>
             <div className="text-center">
               <span className="temperature">
