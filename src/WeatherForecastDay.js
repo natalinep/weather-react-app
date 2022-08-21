@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecastDay(props) {

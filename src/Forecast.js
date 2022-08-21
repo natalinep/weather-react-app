@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 
@@ -12,6 +12,10 @@ export default function Forecast(props) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
+
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
   if (loaded) {
     return (
@@ -27,88 +31,10 @@ export default function Forecast(props) {
             }
           })}
         </div>
-
-        {/* <div className="day-inner">
-            <h6>Mon</h6>
-            <div className="img">
-              <ReactAnimatedWeather
-                icon="CLEAR_DAY"
-                color="goldenrod"
-                size={40}
-                animate={true}
-              />
-            </div>
-            <div className="temp">
-              22° / <span>20°</span>
-            </div>
-          </div>
-
-          <div className="day-inner">
-            <h6>Tue</h6>
-            <div className="img">
-              <ReactAnimatedWeather
-                icon="CLEAR_DAY"
-                color="goldenrod"
-                size={40}
-                animate={true}
-              />
-            </div>
-            <div className="temp">
-              22° / <span>20°</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="day">
-          <div className="day-inner">
-            <h6>Wed</h6>
-            <div className="img">
-              <ReactAnimatedWeather
-                icon="CLEAR_DAY"
-                color="goldenrod"
-                size={40}
-                animate={true}
-              />
-            </div>
-            <div className="temp">
-              22° / <span>20°</span>
-            </div>
-          </div>
-
-          <div className="day-inner">
-            <h6>Thu</h6>
-            <div className="img">
-              <ReactAnimatedWeather
-                icon="CLEAR_DAY"
-                color="goldenrod"
-                size={40}
-                animate={true}
-              />
-            </div>
-            <div className="temp">
-              22° / <span>20°</span>
-            </div>
-          </div>
-
-          <div className="day-inner">
-            <h6>Fri</h6>
-            <div className="img">
-              <ReactAnimatedWeather
-                icon="CLEAR_DAY"
-                color="goldenrod"
-                size={40}
-                animate={true}
-              />
-            </div>
-            <div className="temp">
-              22° / <span>20°</span>
-            </div>
-          </div>
-        </div> */}
       </div>
     );
   } else {
-    const apiKey = "3f08bfa61b58c72a1282fd754e1f43b2";
+    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
     let lon = props.coordinates.lon;
     let lat = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;

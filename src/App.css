@@ -18,6 +18,10 @@
   letter-spacing: 0.5px;
 }
 
+.App .loader {
+  margin: 50px auto;
+}
+
 body {
   background-color: #cecfd2;
 }
