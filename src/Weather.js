@@ -51,6 +51,11 @@ export default function Weather(props) {
 
   function handleCityChange(event) {
     setCityName(event.target.value);
+    setUnit("°C");
+
+    setActiveCelsius(true);
+    setActiveFah(true);
+    setTurn(false);
   }
 
   function showFahrenhait(event) {
