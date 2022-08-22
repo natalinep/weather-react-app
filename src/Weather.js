@@ -18,6 +18,7 @@ export default function Weather(props) {
   let [feels, setFeels] = useState(weatherData.feelsLike);
   let [activeCelsius, setActiveCelsius] = useState(true);
   let [activeFah, setActiveFah] = useState(true);
+  let [turn, setTurn] = useState(false);
 
   function showResponse(response) {
     setLoaded(true);
@@ -60,6 +61,8 @@ export default function Weather(props) {
 
     setActiveFah(false);
     setActiveCelsius(false);
+
+    setTurn(true);
   }
   function showCelsius(event) {
     event.preventDefault();
@@ -69,6 +72,8 @@ export default function Weather(props) {
 
     setActiveCelsius(true);
     setActiveFah(true);
+
+    setTurn(false);
   }
 
   if (loaded) {
@@ -163,7 +168,7 @@ export default function Weather(props) {
               </div>
             </div>
 
-            <Forecast coordinates={weatherData.coordinates} />
+            <Forecast coordinates={weatherData.coordinates} turn={turn} />
 
             <h2>
               <b>Today's Highlights</b>

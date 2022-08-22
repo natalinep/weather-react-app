@@ -25,7 +25,7 @@ export default function Forecast(props) {
             if (index < 6) {
               return (
                 <div className="day-inner my-3" key={index}>
-                  <WeatherForecastDay data={dailyForecast} />
+                  <WeatherForecastDay data={dailyForecast} turn={props.turn} />
                 </div>
               );
             }
