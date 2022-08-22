@@ -39,3 +39,8 @@
     margin: 0;
   }
 }
+@media (max-width: 767px) {
+  .Forecast .day-inner {
+    margin: 1vw;
+  }
+}

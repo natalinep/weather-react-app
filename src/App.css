@@ -25,3 +25,14 @@
 body {
   background-color: #cecfd2;
 }
+
+@media (max-width: 576px) {
+  .App {
+    margin: 0 auto 10px;
+  }
+}
+@media (max-width: 480px) {
+  .App p {
+    font-size: 14px;
+  }
+}

@@ -6,7 +6,6 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather defaultCity="London" />
-        <br />
         <p>
           This app was coded by Nataliia Neporiadkina and{" "}
           <a

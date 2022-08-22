@@ -72,20 +72,20 @@ export default function Weather(props) {
   function showCelsius(event) {
     event.preventDefault();
     setUnit("°C");
-    setDegree(weatherData.temperature);
-    setFeels(weatherData.feelsLike);
-
     setActiveCelsius(true);
     setActiveFah(true);
 
     setTurn(false);
+
+    setDegree(weatherData.temperature);
+    setFeels(weatherData.feelsLike);
   }
 
   if (loaded) {
     return (
       <div className="Weather">
-        <div className="row mb-3">
-          <div className="col-5  weather-info">
+        <div className="row d-block d-md-flex mb-3">
+          <div className="col-md-5  weather-info">
             <form onSubmit={handleSubmit}>
               <input
                 type="search"
@@ -128,7 +128,7 @@ export default function Weather(props) {
             </div>
           </div>
 
-          <div className="col-7 weather-main">
+          <div className="col-md-7 weather-main">
             <div className="d-flex justify-content-between">
               <h2>
                 <b>This Week</b>

@@ -90,3 +90,44 @@
     min-width: 190px;
   }
 }
+
+@media (max-width: 767px) {
+  .Weather .weather-info {
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+  }
+
+  .Weather .weather-main {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  }
+
+  .Weather .search {
+    min-width: 430px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Weather .search {
+    min-width: 72vw;
+  }
+  .Weather .weather-info,
+  .Weather .weather-main {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Weather .search {
+    min-width: 60vw;
+  }
+  .Weather .highlights {
+    flex-wrap: wrap;
+  }
+  .Weather .highlights-inner:last-child {
+    margin-top: 15px;
+  }
+  .Weather .weather-main {
+    padding-bottom: 15px;
+  }
+}
